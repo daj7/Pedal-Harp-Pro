@@ -1,2 +1,2 @@
 # Pedal-Harp-Pro
- Pedal Harp Simulator Android App
+ Pedal Harp Simulator App for Android
