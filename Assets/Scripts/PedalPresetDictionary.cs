@@ -5,23 +5,32 @@ using UnityEngine;
 [CreateAssetMenu(fileName="Data", menuName = "ScriptableObjects/pedalPresetDictionary", order = 1)]
 public class PedalPresetDictionary : ScriptableObject 
 {
+    //Dictionary containing definitions for pedal presets
+    //Each preset definition is a string of seven letters, 'F' 'S' or 'N'
+    //'F' = Flat
+    //'S' = Sharp
+    //'N' = Natural
+    //The preset string is used to set the pedals, which affect the pitches the strings play
+    //The pedals are set in the following order: DCBEFGA ("Did Columbus Bring Enough Food to Go to America")
+    //A preset of NNNNNNN sets all of the pedals to the "Natural" position so the strings will play all natural notes
+    //A preset of NNFNNNN sets all pedals to "Natural" except B, which is set to flat. This makes all of the B strings on the harp play B-flat instead of B-natural
      public Dictionary<string, string> dictionary = new Dictionary<string, string>()
      {
         {"C Major / A Minor", "NNNNNNN" },
         {"G Major / E Minor", "NNNNSNN" },
         {"D Major / B Minor", "NSNNSNN" },
-        {"A Major / F-sharp Minor", "NSNNSSN" },
-        {"E Major / C-sharp Minor", "SSNNSSN" },
-        {"B Major / G-sharp Minor", "SSNNSSS" },
-        {"F-sharp Major / D-sharp Minor", "SSNSSSS" },
-        {"C-sharp Major / A-sharp Minor", "SSSSSSS" },
+        {"A Major / F# Minor", "NSNNSSN" },
+        {"E Major / C# Minor", "SSNNSSN" },
+        {"B Major / G# Minor", "SSNNSSS" },
+        {"F# Major / D# Minor", "SSNSSSS" },
+        {"C# Major / A# Minor", "SSSSSSS" },
         {"F Major / D Minor", "NNFNNNN" },
-        {"B-flat Major / G Minor", "NNFFNNN" },
-        {"E-flat Major / C Minor", "NNFFNNF" },
-        {"A-flat Major / F Minor", "FNFFNNF" },
-        {"D-flat Major / B-flat Minor", "FNFFNFF" },
-        {"G-flat Major / E-flat Minor", "FFFFNFF" },
-        {"C-flat Major / A-flat Minor", "FFFFFFF" },
+        {"Bb Major / G Minor", "NNFFNNN" },
+        {"Eb Major / C Minor", "NNFFNNF" },
+        {"Ab Major / F Minor", "FNFFNNF" },
+        {"Db Major / Bb Minor", "FNFFNFF" },
+        {"Gb Major / Eb Minor", "FFFFNFF" },
+        {"Cb Major / Ab Minor", "FFFFFFF" },
         {"CM / am Pentatonic", "NNSNFNN" },
         {"GM / em Pentatonic", "NFNNFNN" },
         {"DM / bm Pentatonic", "NFNNSFN" },
@@ -48,13 +57,13 @@ public class PedalPresetDictionary : ScriptableObject
         {"A Lydian-Mixolydian", "SSNNSNN" },
         {"E Lydian-Mixolydian", "NSNNSSS" },
         {"B Lydian-Mixolydian", "SSNSSSN" },
-        {"F-sharp Lydian-Mixolydian", "SSSNSSS" },
+        {"F# Lydian-Mixolydian", "SSSNSSS" },
         {"F Lydian-Mixolydian", "NNNFNNN" },
-        {"B-flat Lydian-Mixolydian", "NNFNNNF" },
-        {"E-flat Lydian-Mixolydian", "FNFFNNN" },
-        {"A-flat Lydian-Mixolydian", "NNFFNFF" },
-        {"D-flat Lydian-Mixolydian", "FFFFNNF" },
-        {"G-flat Lydian-Mixolydian", "FNFFFFF" },
+        {"Bb Lydian-Mixolydian", "NNFNNNF" },
+        {"Eb Lydian-Mixolydian", "FNFFNNN" },
+        {"Ab Lydian-Mixolydian", "NNFFNFF" },
+        {"Db Lydian-Mixolydian", "FFFFNNF" },
+        {"Gb Lydian-Mixolydian", "FNFFFFF" },
         {"E Pelog", "SFNNFSN" },
         {"B/Cb Pelog", "SFNNSFS" },
         {"F#/Gb Pelog", "FFFSSFS" },
@@ -65,10 +74,10 @@ public class PedalPresetDictionary : ScriptableObject
         {"A Double Harmonic", "NSFNNSN" },
         {"E Double Harmonic", "SNNNNSN" },
         {"B Double Harmonic", "SNNNSNS" },
-        {"F-sharp Double Harmonic", "NSNSSNS" },
-        {"C-sharp Double Harmonic", "NSSSSSN" },
+        {"F# Double Harmonic", "NSNSSNS" },
+        {"C# Double Harmonic", "NSSSSSN" },
         {"F Double Harmonic", "FNFNNFN" },
-        {"B-flat Double Harmonic", "NFFFNFN" },
-        {"E-flat Double Harmonic", "NFFFFNF" },
+        {"Bb Double Harmonic", "NFFFNFN" },
+        {"Eb Double Harmonic", "NFFFFNF" },
     };
 }
